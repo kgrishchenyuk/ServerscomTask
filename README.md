@@ -1,24 +1,42 @@
-# README
+# Тестовое задание Servers.com
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Описание
 
-Things you may want to cover:
+Проект создан в рамках выполнения тестового задания от компании Servers.com. Требования предъявленные к проекту описаны ниже.
 
-* Ruby version
+##### Ruby version
+```
+ruby 2.7.2
+```
 
-* System dependencies
+##### Rails version
+```
+Rails 6.1.4 
+```
 
-* Configuration
+### Первый запуск
+```
+gem install bundler
+bundle install
+```
 
-* Database creation
+Далее необходимо сконфигурировать файлы `config/database.yml` и `config/schedule.rb`.
 
-* Database initialization
+Затем подготавливаем базу данных:
 
-* How to run the test suite
+```
+rails db:create
+rails db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Добавляем задачу в cron из конфигурации Whenever:
 
-* Deployment instructions
+```
+bundle exec whenever --update-crontab --set environment="development"
+```
 
-* ...
+Запуск сервера
+
+```
+rails s
+```
