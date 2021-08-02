@@ -29,7 +29,7 @@ rails db:create
 rails db:migrate
 ```
 
-Добавляем задачу в cron из конфигурации Whenever:
+Добавляем задачу в cron, которая пингует сервера, из конфигурации Whenever:
 
 ```
 bundle exec whenever --update-crontab --set environment="development"
