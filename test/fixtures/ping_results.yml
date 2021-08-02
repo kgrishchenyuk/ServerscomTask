@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  success: false
+  min_rtt: 1.5
+  avg_rtt: 1.5
+  max_rtt: 1.5
+  mdev_rtt: 1.5
+  host: one
+
+two:
+  success: false
+  min_rtt: 1.5
+  avg_rtt: 1.5
+  max_rtt: 1.5
+  mdev_rtt: 1.5
+  host: two
