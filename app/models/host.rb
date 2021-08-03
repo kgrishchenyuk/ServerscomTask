@@ -34,7 +34,7 @@ class Host < ApplicationRecord
             mdev_rtt: groups[10].to_f
           }
         else
-          params = { success: true, transmitted: 5, received: 0 }
+          params = { success: false, transmitted: 5, received: 0 }
         end
 
         host.ping_results.create(params)
